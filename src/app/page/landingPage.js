@@ -1,12 +1,14 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import Header from '../landing-page/header';
-import Menu from '../landing-page/menu';
+import Main from '../landing-page/main';
 
 const LandingPage = () => {
   return ( 
     <React.Fragment>
       <Header/>
-      <Menu/>
+      <Route path="/" exact component={Main} />
+      
     </React.Fragment>
   );
 }

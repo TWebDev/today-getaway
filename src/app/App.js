@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
 import LandingPage from './page/landingPage';
 
 class App extends Component {
@@ -6,7 +7,9 @@ class App extends Component {
   render() { 
     return ( 
       <React.Fragment>
-        <LandingPage/>
+        <Router>
+          <LandingPage/>
+        </Router>
       </React.Fragment>
     );
   }

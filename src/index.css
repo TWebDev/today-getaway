@@ -17,9 +17,9 @@ div.Header div.container span.icon svg {
   height: 80px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 630px) {
   div.Header {
-    height: 30vh;
+    height: fit-content;
   }
   div.Header div.container {
     width: 90%;
@@ -36,71 +36,119 @@ div.Header div.container span.icon svg {
     height: 30px;
   }
 }
-div.Menu {
+div.Main {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: 1s linear;
 }
-div.Menu div.container {
+div.Main div.container {
   width: 66.66%;
   margin: 0 auto;
 }
-div.Menu div.menu {
+div.Main div.container h1 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+div.Main div.menu {
   background: #c47200;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+div.Main div.menu div.item-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 66.66%;
+  margin: 0 auto;
+}
+div.Main div.menu div.item-container section.icon {
+  padding: 10px;
+  cursor: pointer;
+  transition: 150ms linear;
+}
+div.Main div.menu div.item-container section.icon svg {
+  height: 150px;
+  fill: white;
+}
+div.Main div.menu div.item-container section.icon h4 {
+  margin-bottom: 0;
+}
+div.Main div.menu div.item-container section.icon:hover {
+  background: #f79000;
+}
+div.Main div.menu div.item-container section.icon:active {
+  background: #ffa62b;
+}
+div.Main div.menu div.item-container section.icon:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 1024px) {
-  div.Menu {
+  div.Main {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  div.Menu div.container {
-    width: 66.66%;
-    margin: 0 auto;
-  }
-  div.Menu div.container h1 {
+  div.Main div.container h1 {
     font-size: 1.2em;
   }
-  div.Menu div.menu {
-    background: #c47200;
-    display: flex;
-    justify-content: center;
+  div.Main div.menu div.item-container section.icon svg {
+    height: 120px;
+    fill: white;
   }
 }
-@media screen and (max-width: 425px) {
-  div.Menu {
-    height: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@media screen and (max-width: 768px) {
+  div.Main div.menu div.item-container section.icon {
+    border-radius: 0;
   }
-  div.Menu div.container {
-    width: 66.66%;
-    margin: 0 auto;
+  div.Main div.menu div.item-container section.icon:hover {
+    background: initial;
+    box-shadow: none;
   }
-  div.Menu div.container section.logo {
+}
+@media screen and (max-width: 630px) {
+  div.Main {
+    height: fit-content;
+  }
+  div.Main div.container section.logo {
     display: none;
   }
-  div.Menu div.container h1 {
+  div.Main div.container h1 {
     font-size: 0.8em;
     text-align: center;
   }
-  div.Menu div.menu {
-    background: #c47200;
+  div.Main div.menu div.item-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  div.Main div.menu div.item-container section.icon {
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+  }
+  div.Main div.menu div.item-container section.icon svg {
+    height: 100px;
+    fill: white;
+  }
+  div.Main div.menu div.item-container section.icon h4 {
+    display: inline;
+    margin: 1.33em 0;
   }
 }
 body {
   background-image: url(/static/images/quad-bg.png);
+  background-color: #444444;
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
+  background-position-x: right;
+  background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;
 }
 
