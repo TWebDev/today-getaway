@@ -4,13 +4,12 @@ import LandingPage from './page/landingPage';
 
 class App extends Component {
   state = {  }
+
   render() { 
     return ( 
-      <React.Fragment>
-        <Router>
-          <LandingPage/>
-        </Router>
-      </React.Fragment>
+      <Router>
+        <LandingPage/>
+      </Router>
     );
   }
 }

@@ -1,8 +1,10 @@
 import React from 'react';
+import Header from './header';
 import Logo from '../components/logo';
-import Search from '../components/icons/search';
+import Glass from '../components/icons/glass';
 import Landmark from '../components/icons/landmark';
 import Camera from '../components/icons/camera';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
 
@@ -17,21 +19,25 @@ const Main = () => {
 
   var icons = [
     {
-      tag:      <Search/>,
-      children: 'Search'
+      tag:      <Glass/>,
+      children: 'Search',
+      route: '/search'
     },
     {
       tag:      <Landmark/>,
-      children: 'Visit'
+      children: 'Visit',
+      route: '/visit'
     },
     {
       tag:      <Camera/>,
-      children: 'Enjoy'
+      children: 'Enjoy',
+      route: '/enjoy'
     }
   ]
 
   return ( 
     <React.Fragment>
+      <Header/>
       <div className="Main">
         <div className="container">
           <section className="logo">
@@ -46,10 +52,12 @@ const Main = () => {
           <div className="item-container">
             {
               icons.map((item, index) => 
-                <section className="icon" key={index}>
-                  {item.tag}
-                  <h4 style={h4}>{item.children}</h4>
-                </section>
+                <Link to={item.route} key={index}>
+                  <section className="icon">
+                    {item.tag}
+                    <h4 style={h4}>{item.children}</h4>
+                  </section>
+                </Link>
               )
             }
           </div>

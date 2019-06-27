@@ -53,10 +53,6 @@ div.Main div.container h1 {
   -ms-user-select: none;
   user-select: none;
 }
-div.Main div.menu {
-  background: #c47200;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
 div.Main div.menu div.item-container {
   display: flex;
   justify-content: space-between;
@@ -120,9 +116,12 @@ div.Main div.menu div.item-container section.icon:focus {
     font-size: 0.8em;
     text-align: center;
   }
+  div.Main div.menu {
+    background: #c47200;
+  }
   div.Main div.menu div.item-container {
     flex-direction: column;
-    align-items: center;
+    align-items: inherit;
     justify-content: space-evenly;
   }
   div.Main div.menu div.item-container section.icon {
@@ -141,6 +140,135 @@ div.Main div.menu div.item-container section.icon:focus {
     margin: 1.33em 0;
   }
 }
+div.Route {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  overflow: hidden;
+}
+div.Route div.wrapper {
+  padding: 20px;
+}
+div.Route div.wrapper svg {
+  height: 30px;
+}
+div.Route div.card {
+  background: #c47200;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 0%;
+  transition: width 0.8s cubic-bezier(0.93, 0.25, 0.49, 1.31);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+div.Route div.card svg {
+  height: 80px;
+  fill: white;
+}
+div.Route div.card h3 {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: capitalize;
+}
+div.Route div.container {
+  width: 66.66%;
+  margin: 0 auto;
+}
+div.Route div.container section.content {
+  padding: 30px;
+}
+div.Route div.container section.content p {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+div.Route div.container section.content p:hover {
+  cursor: default;
+}
+div.Route div.container section.content button {
+  background: #f79000;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 100ms linear;
+}
+div.Route div.container section.content button:hover {
+  cursor: pointer;
+  background: #ffa62b;
+}
+div.Route div.container section.content button:active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+div.Route div.container section.content button:focus {
+  outline: none;
+}
+div.Route div.container footer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+}
+div.Route div.container footer a section {
+  height: 100%;
+  padding: 10px;
+  transition: 100ms ease-in-out;
+}
+div.Route div.container footer a section:hover {
+  background: #c47200;
+}
+div.Route div.container footer a section:active {
+  background: #ffa62b;
+}
+div.Route div.container footer a section svg {
+  height: 100px;
+  fill: white;
+}
+div.Route div.container#footer {
+  height: 0em;
+  transition: height 0.2s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  div.Route div.wrapper {
+    padding: 20px;
+  }
+  div.Route div.card svg {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 630px) {
+  div.Route div.wrapper {
+    padding: 20px;
+  }
+  div.Route div.wrapper svg {
+    display: block;
+    margin: 0 auto;
+  }
+  div.Route div.card svg {
+    height: 40px;
+  }
+  div.Route div.container {
+    width: 90%;
+  }
+  div.Route div.container footer a section {
+    padding: 10px;
+  }
+  div.Route div.container footer a section svg {
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    fill: white;
+  }
+  div.Route div.container footer a section h4 {
+    font-size: 10px;
+  }
+}
 body {
   background-image: url(/static/images/quad-bg.png);
   background-color: #444444;
@@ -150,6 +278,51 @@ body {
   background-position-x: right;
   background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+div#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #dddddd;
+}
+div#loading svg {
+  width: 80%;
+}
+
+.enjoy {
+  background-image: url(/static/images/enjoy.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.search {
+  background-image: url(/static/images/search.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.visit {
+  background-image: url(/static/images/visit.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 0.5s linear;
 }
 
 /*# sourceMappingURL=index.css.map */
