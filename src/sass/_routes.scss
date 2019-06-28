@@ -1,0 +1,163 @@
+@import "./variables";
+
+div.Route {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  overflow: hidden;
+
+  div.wrapper {
+    padding: 20px;
+    svg {
+      height: 30px;
+    }
+  }
+
+  div.card {    
+    background: #c47200;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content:flex-end;
+    width: 0%;
+    transition: width 0.8s cubic-bezier(.93,.25,.49,1.31);
+    box-shadow: $shadow-depth-2;
+
+    svg {
+      height: 80px;
+      fill: white;
+    }
+    h3 {
+      cursor: default;
+      -webkit-user-select: none;      
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      text-transform: capitalize;
+    }
+  }
+
+  div.container {
+    width: 66.66%;
+    margin: 0 auto;
+
+    section.content {
+      padding: 30px;
+
+      p {
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        text-shadow: $shadow-depth-1;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+      button {
+        background: $background;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 20px;
+        box-shadow: $shadow-depth-4;
+        transition: 100ms linear;
+
+        &:hover {
+          cursor: pointer;
+          background: $link;
+        }
+
+        &:active {
+          box-shadow: $shadow-depth-2;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-evenly;    
+      height: 100%;
+      a {
+        section {   
+          height: 100%;       
+          padding: 10px;
+          transition: 100ms ease-in-out;
+          &:hover {
+            background: $primary;
+          }
+
+          &:active {
+            background: $link;
+          }
+
+          svg {
+            height: 100px;
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+
+  div.container#footer {
+    height: 0em;
+    transition: height 0.2s ease-out;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.Route {
+    div.wrapper {
+      padding: 20px;
+    }
+  
+    div.card {
+      svg {
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  div.Route {
+    div.wrapper {
+      padding: 20px;
+      svg {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  
+    div.card {
+      svg {
+        height: 40px;
+      }
+    }
+    
+    div.container {
+      width: 90%;
+      footer { 
+        a {        
+          section {
+            padding: 10px;
+            svg {
+              display: block;
+              margin: 0 auto;
+              height: 40px;
+              fill: white;
+            }
+            h4 {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
