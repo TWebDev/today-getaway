@@ -7,14 +7,18 @@
 @import "./variables";
 
 body {
+  margin: 0;
+  font-family: $font-family;
+  background: #444444;
+}
+
+.landing-page {
   background-image: url(/static/images/quad-bg.png);
   background-color: #444444;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0;
   background-position-x: right;
   background-repeat: no-repeat;
-  font-family: $font-family;
 }
 
 a {

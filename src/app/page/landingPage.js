@@ -15,7 +15,8 @@ const LandingPage = () => {
           clsColor3='#fff'
         />
       </div>
-    }>      
+    }>
+      <div className="landing-page">      
       <Route path="/" exact component={Main} />
       {
         store.map((item, i) => 
@@ -33,7 +34,8 @@ const LandingPage = () => {
                 />
             } />
         )
-      }      
+      } 
+      </div>     
     </React.Suspense>
   );
 }

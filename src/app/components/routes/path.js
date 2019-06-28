@@ -13,17 +13,18 @@ const Path = (props) => {
   } = props;
   
   useEffect(() => {
-    var resolution = window.screen.width,
-        slidingCard = document.getElementById("card"),
-        showFooter = document.getElementById("footer"),
-        bg = document.getElementById("route");
-        bg.style.opacity = "1"
-        showFooter.style.height = "10em"
-    if (resolution === 768) {
-      slidingCard.style.width = "80%";
-    } else {
-      slidingCard.style.width = "30%"
-    } 
+      var resolution = window.screen.width,
+          slidingCard = document.getElementById("card"),
+          showFooter = document.getElementById("footer"),
+          bg = document.getElementById("route");
+          bg.style.opacity = "1"
+          showFooter.style.height = "10em"
+      if (resolution === 768) {
+        slidingCard.style.width = "80%";
+      } else {
+        slidingCard.style.width = "30%"
+      } 
+
   });
 
   const h3 = {
