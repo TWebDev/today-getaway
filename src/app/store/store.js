@@ -14,9 +14,9 @@ const store = [
   {
     route:      'search',
     titleIcon:  <Glass/>,
-    content:    <p> Lorem ipsum dolor sit amet <br/>
-                    consectetur adipiscing elit mollis, <br/>
-                    semper scelerisque litora non hac.
+    content:    <p> Are you looking for a great adventure? <br/>
+                We have the right places for you, enjoy yourself in <br/>
+                Los Cabos, Loreto, Cancun or Puerto Vallarta.
                 </p>,
     opt1:       <Link to="/visit">
                   <section className="icon">
@@ -34,9 +34,10 @@ const store = [
   {
     route:      'enjoy',
     titleIcon:  <Camera/>,
-    content:    <p> Lorem ipsum dolor sit amet <br/>
-                    consectetur adipiscing elit mollis, <br/>
-                    semper scelerisque litora non hac.
+    content:    <p> Eat great food, have amazing experiences, <br/>
+                take great pictures. <br/>
+                Allow yourself to be amazed by a sincere place <br/>
+                and become a checker.
                 </p>,
     opt1:       <Link to="/visit">
                   <section className="icon">
@@ -54,9 +55,9 @@ const store = [
   { 
     route:      'visit',
     titleIcon:  <Landmark/>,
-    content:    <p> Lorem ipsum dolor sit amet <br/>
-                    consectetur adipiscing elit mollis, <br/>
-                    semper scelerisque litora non hac.
+    content:    <p> Come and meet Mexico where spontaneity is everywhere. <br/>
+                Have a wild night out, take a look to a great view at the parachute <br/>
+                or take a long hike.
                 </p>,
     opt1:       <Link to="/search">
                   <section className="icon">

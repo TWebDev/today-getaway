@@ -6,10 +6,12 @@ import LandingPage from './page/landingPage';
 ReactGa.initialize('UA-142110236-3')
 ReactGa.pageview(window.location.pathname + window.location.search)
 
-const App = () => (
+function App() {
+    return ( 
       <Router>
         <LandingPage/>
       </Router>
-    )
+    );
+}
 
 export default App;

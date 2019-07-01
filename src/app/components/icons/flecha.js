@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Flecha = () => {
+const Flecha = (props) => {
 
   const cls1 = {
     fill:            'none',
@@ -10,7 +10,7 @@ const Flecha = () => {
     strokeWidth:    '24px'
   }
   return ( 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.4537 311.9412">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.4537 311.9412" onClick={props.toggleHandler}>
       <line style={cls1} x1="71.5439" y1="12" x2="71.5439" y2="71.9375"/>
       <line style={cls1} x1="71.5439" y1="113.2523" x2="71.5439" y2="156.6657"/>
       <line style={cls1} x1="70.5439" y1="194.2278" x2="70.5439" y2="299.9412"/>
