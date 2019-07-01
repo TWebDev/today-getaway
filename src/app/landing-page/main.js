@@ -46,7 +46,7 @@ const Main = () => {
               clsColor2='#fff'
               clsColor3='#fff' />
           </section>
-          <h1 style={h1}>Start your vacation bucket list!</h1>
+          <h1 style={h1} className="desktop">Start your vacation bucket list!</h1>
         </div>
         <div className="menu">
           <div className="item-container">

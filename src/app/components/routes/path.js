@@ -9,23 +9,24 @@ const Path = (props) => {
     titleIcon,
     content,
     opt1,
-    opt2
+    opt2,
+
+    toggleHandler
   } = props;
   
   useEffect(() => {
-      var resolution = window.screen.width,
-          slidingCard = document.getElementById("card"),
-          showFooter = document.getElementById("footer"),
-          bg = document.getElementById("route");
-          bg.style.opacity = "1"
-          showFooter.style.height = "10em"
-      if (resolution === 768) {
-        slidingCard.style.width = "80%";
-      } else {
-        slidingCard.style.width = "30%"
-      } 
-
-  });
+    var resolution = window.screen.width,
+        slidingCard = document.getElementById("card"),
+        showFooter = document.getElementById("footer"),
+        bg = document.getElementById("route");
+        bg.style.opacity = "1"
+        showFooter.style.height = "10em"
+    if (resolution === 768) {
+      slidingCard.style.width = "80%";
+    } else {
+      slidingCard.style.width = "30%"
+    } 
+  },[]);
 
   const h3 = {
     color: "white",
@@ -54,7 +55,7 @@ const Path = (props) => {
         <div className="container">
           <section className="content">
             {content}
-            <button>Book Now!</button>
+            <button onClick={toggleHandler}>Book Now!</button>
           </section>
         </div>
         <div className="container" id="footer">
