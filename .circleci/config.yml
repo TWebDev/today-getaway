@@ -1,8 +1,0 @@
-version: 0.0.1
-
-orbs: 
-  hello: circleci/hello-build@0.0.7
-
-workflows: 
-  jobs:
-    - npm run build
