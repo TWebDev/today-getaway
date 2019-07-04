@@ -14,7 +14,7 @@
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/netlify-dev-plugin#project-detection
   [production] 
-    command = "npm start" # Command to start your dev server
+    command = "node start" # Command to start your dev server
     port = 8080 # Port that the dev server will be listening on
     publish = "/build" # Folder with the static content for _redirect file
   
