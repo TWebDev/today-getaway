@@ -34,7 +34,7 @@ const Form = (props) => {
   const updateForm = e => {
     let formFields = Object.assign({}, form.formFields);    
     let formFilled = Object.assign({}, form.formFilled);   
-    e.target.fname = e.target.fname.toLowerCase();
+    e.target.name = e.target.name.toLowerCase();
     
     switch (e.target.name) {
       case "fname":
