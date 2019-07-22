@@ -66,7 +66,7 @@ const Form = (props) => {
           var phone;
           var invalidChars = /\D+/gm;
               formFields.mmerge6 = e.target.value;
-              formFields.mmerge6 = formFields.phone.replace(/ /g,'');
+              formFields.mmerge6 = formFields.mmerge6.replace(/ /g,'');
               formFields.mmerge6.length ? phone = true : phone = false;    
           var str = formFields.mmerge6;
 
