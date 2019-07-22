@@ -141,6 +141,15 @@ const Form = (props) => {
             className="validate"
             target="_blank"
             noValidate>
+            <div className="mc-field-group" id="email">
+              <Input        
+              Type="email"
+              Name="EMAIL"
+              Placeholder="email@mailme.com"
+              inputHandler={e => updateForm(e)}
+              Value={form.formFields.email}           
+            ></Input>
+            </div>  
             <div className="mc-field-group">
               <Input        
               Type="text"
@@ -167,16 +176,7 @@ const Form = (props) => {
               inputHandler={e => updateForm(e)}  
               Value={form.formFields.phone}          
               ></Input>
-            </div>
-            <div className="mc-field-group" id="email">
-              <Input        
-              Type="email"
-              Name="EMAIL"
-              Placeholder="email@mailme.com"
-              inputHandler={e => updateForm(e)}
-              Value={form.formFields.email}           
-            ></Input>
-            </div>    
+            </div>  
             <div className="mc-field-group" id="selects">
               <Select
               Options={["","9:00 am - 12:00 pm","12:00 pm - 3:00 pm","3:00 pm - 6:00 pm"]}
