@@ -37,7 +37,7 @@ const Form = (props) => {
     e.target.name = e.target.name.toLowerCase();
     
     switch (e.target.name) {
-      case "name":
+      case "fname":
           var name;                
               formFields.name = e.target.value;
               formFields.name = formFields.name.replace(/ /g,'');
@@ -50,7 +50,7 @@ const Form = (props) => {
 
           break;
 
-      case "last":
+      case "lname":
           var last;
               formFields.last = e.target.value;
               formFields.last = formFields.last.replace(/ /g,'');
@@ -62,7 +62,7 @@ const Form = (props) => {
           })
         break;
 
-        case "phone":
+        case "mmerge6":
           var phone;
           var invalidChars = /\D+/gm;
               formFields.phone = e.target.value;
