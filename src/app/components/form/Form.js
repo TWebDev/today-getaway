@@ -14,15 +14,15 @@ const Form = (props) => {
 
   const [form, setForm] = useState({
     formFields: {
-                  name:  '',
-                  last:  '',
-                  phone: '',
+                  fname:  '',
+                  lname:  '',
+                  mmerge6: '',
                   email: ''
                 },
     formFilled: {
-                  name:  false,
-                  last:  false,
-                  phone: false,
+                  fname:  false,
+                  lname:  false,
+                  mmerge6: false,
                   email: false
                 }
   })
@@ -34,7 +34,7 @@ const Form = (props) => {
   const updateForm = e => {
     let formFields = Object.assign({}, form.formFields);    
     let formFilled = Object.assign({}, form.formFilled);   
-    e.target.name = e.target.name.toLowerCase();
+    e.target.fname = e.target.fname.toLowerCase();
     
     switch (e.target.name) {
       case "fname":
@@ -112,9 +112,9 @@ const Form = (props) => {
     }
   }
 
-  if( form.formFilled.name  &&
-      form.formFilled.last  &&
-      form.formFilled.phone &&
+  if( form.formFilled.fname  &&
+      form.formFilled.lname  &&
+      form.formFilled.mmerge6 &&
       form.formFilled.email === true) {
     var disabled = false;
     } else {
