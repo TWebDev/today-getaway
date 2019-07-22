@@ -156,7 +156,7 @@ const Form = (props) => {
               Name="FNAME"
               Placeholder="First Name"
               inputHandler={e => updateForm(e)}
-              Value={form.formFields.name}      
+              Value={form.formFields.fname}      
               ></Input>
             </div>
             <div className="mc-field-group">
@@ -165,7 +165,7 @@ const Form = (props) => {
               Name="LNAME"
               Placeholder="Last Name"
               inputHandler={e => updateForm(e)}
-              Value={form.formFields.last}            
+              Value={form.formFields.lname}            
               ></Input>
             </div>
             <div className="mc-field-group">
@@ -174,7 +174,7 @@ const Form = (props) => {
               Name="MMERGE6"
               Placeholder="123-456-7890"
               inputHandler={e => updateForm(e)}  
-              Value={form.formFields.phone}          
+              Value={form.formFields.mmerge6}          
               ></Input>
             </div>  
             <div className="mc-field-group" id="selects">
