@@ -39,10 +39,10 @@ const Form = (props) => {
     switch (e.target.name) {
       case "fname":
           var name;                
-              formFields.name = e.target.value;
-              formFields.name = formFields.name.replace(/ /g,'');
-              formFields.name.length ? name= true : name = false;
-              formFilled.name = name
+              formFields.fname = e.target.value;
+              formFields.fname = formFields.fname.replace(/ /g,'');
+              formFields.fname.length ? name= true : name = false;
+              formFilled.fname = name
 
           setForm({
             formFields, formFilled
@@ -52,10 +52,10 @@ const Form = (props) => {
 
       case "lname":
           var last;
-              formFields.last = e.target.value;
-              formFields.last = formFields.last.replace(/ /g,'');
-              formFields.last.length ? last= true : last = false;
-              formFilled.last = last
+              formFields.lname = e.target.value;
+              formFields.lname = formFields.lname.replace(/ /g,'');
+              formFields.lname.length ? last= true : last = false;
+              formFilled.lname = last
 
           setForm({
             formFields, formFilled
@@ -65,12 +65,12 @@ const Form = (props) => {
         case "mmerge6":
           var phone;
           var invalidChars = /\D+/gm;
-              formFields.phone = e.target.value;
-              formFields.phone = formFields.phone.replace(/ /g,'');
-              formFields.phone.length ? phone = true : phone = false;    
-          var str = formFields.phone;
+              formFields.mmerge6 = e.target.value;
+              formFields.mmerge6 = formFields.phone.replace(/ /g,'');
+              formFields.mmerge6.length ? phone = true : phone = false;    
+          var str = formFields.mmerge6;
 
-          if (invalidChars.test(formFields.phone)) {
+          if (invalidChars.test(formFields.mmerge6)) {
             str = str.replace(invalidChars, "");
             phone = false;
           }        
@@ -85,8 +85,8 @@ const Form = (props) => {
           } else {
               phone = false;
           }
-          formFields.phone = str;
-          formFilled.phone = phone
+          formFields.mmerge6 = str;
+          formFilled.mmerge6 = phone
 
         
           setForm({
