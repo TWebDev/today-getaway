@@ -170,7 +170,7 @@ const Form = (props) => {
             </div>
             <div className="mc-field-group">
               <Input        
-              Type="tel"
+              Type="phone"
               Name="PHONE"
               Placeholder="123-456-7890"
               inputHandler={e => updateForm(e)}  
