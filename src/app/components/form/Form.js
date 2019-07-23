@@ -16,13 +16,13 @@ const Form = (props) => {
     formFields: {
                   fname:  '',
                   lname:  '',
-                  mmerge6: '',
+                  phone: '',
                   email: ''
                 },
     formFilled: {
                   fname:  false,
                   lname:  false,
-                  mmerge6: false,
+                  phone: false,
                   email: false
                 }
   })
@@ -62,15 +62,15 @@ const Form = (props) => {
           })
         break;
 
-        case "mmerge6":
+        case "phone":
           var phone;
           var invalidChars = /\D+/gm;
-              formFields.mmerge6 = e.target.value;
-              formFields.mmerge6 = formFields.mmerge6.replace(/ /g,'');
-              formFields.mmerge6.length ? phone = true : phone = false;    
-          var str = formFields.mmerge6;
+              formFields.phone = e.target.value;
+              formFields.phone = formFields.phone.replace(/ /g,'');
+              formFields.phone.length ? phone = true : phone = false;    
+          var str = formFields.phone;
 
-          if (invalidChars.test(formFields.mmerge6)) {
+          if (invalidChars.test(formFields.phone)) {
             str = str.replace(invalidChars, "");
             phone = false;
           }        
@@ -85,8 +85,8 @@ const Form = (props) => {
           } else {
               phone = false;
           }
-          formFields.mmerge6 = str;
-          formFilled.mmerge6 = phone
+          formFields.phone = str;
+          formFilled.phone = phone
 
         
           setForm({
@@ -114,7 +114,7 @@ const Form = (props) => {
 
   if( form.formFilled.fname  &&
       form.formFilled.lname  &&
-      form.formFilled.mmerge6 &&
+      form.formFilled.phone &&
       form.formFilled.email === true) {
     var disabled = false;
     } else {
@@ -171,20 +171,20 @@ const Form = (props) => {
             <div className="mc-field-group">
               <Input        
               Type="tel"
-              Name="MMERGE6"
+              Name="PHONE"
               Placeholder="123-456-7890"
               inputHandler={e => updateForm(e)}  
-              Value={form.formFields.mmerge6}          
+              Value={form.formFields.phone}          
               ></Input>
             </div>  
             <div className="mc-field-group" id="selects">
               <Select
               Options={["","9:00 am - 12:00 pm","12:00 pm - 3:00 pm","3:00 pm - 6:00 pm"]}
-              Name="MMERGE3"
+              Name="TIME"
               ></Select>
               <Select
               Options={["","January - April","May - August","September - December"]}
-              Name="MMERGE4"
+              Name="DATEVISIT"
               ></Select>
             </div>                                    
             <Button
