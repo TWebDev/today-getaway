@@ -7,6 +7,7 @@ ReactGa.initialize('UA-142110236-3')
 ReactGa.pageview(window.location.pathname + window.location.search)
 
 function App() {
+  
     return ( 
       <Router>
         <LandingPage/>

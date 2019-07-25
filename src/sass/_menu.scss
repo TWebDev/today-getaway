@@ -1,0 +1,140 @@
+@import "./variables";
+
+div.Main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1s linear;
+
+  div.container {
+    width: 66.66%;
+    margin: 0 auto;
+    h1 {
+      -webkit-user-select: none;      
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+
+  div.menu {
+    div.item-container {
+      display: flex;
+      justify-content: space-between;
+      width: 66.66%;
+      margin: 0 auto;
+      section.icon {
+        padding: 10px;
+        cursor: pointer;
+        transition: 150ms linear;
+
+        svg {
+          height: 150px;
+          fill: white;
+        }
+
+        h4 {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          background: $background;
+        }
+
+        &:active {
+          background: $link;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  div.Main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    div.container {
+      h1.desktop {
+        visibility: hidden;
+      }
+    }
+  
+    div.menu {
+      div.item-container {
+        section.icon {
+          svg {
+            height: 120px;
+            fill: white;
+          }
+        }
+      }        
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.Main {
+    div.menu {
+      div.item-container {
+        section.icon {
+          border-radius: 0;
+
+          &:hover {
+            background: initial;
+            box-shadow: none;
+          }
+        }
+      }        
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  div.Main {
+    height: fit-content;
+  
+    div.container {
+      section.logo {
+        display: none;
+      }
+
+      h1 {
+        font-size: 0.8em;
+        text-align: center;
+      }
+    }
+  
+    div.menu {
+      background: $primary;
+      div.item-container {
+        flex-direction: column;
+        align-items: inherit;
+        justify-content: space-evenly;
+
+        section.icon {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          width: 90%;
+          justify-content: space-between;
+          svg {
+            height: 100px;
+            fill: white;
+          }
+          h4 {
+            display: inline;
+            margin: 1.33em 0;
+          }
+        }
+      }
+    }
+  }
+}

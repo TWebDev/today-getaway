@@ -5,6 +5,7 @@ import Glass from '../components/icons/glass';
 import Landmark from '../components/icons/landmark';
 import Camera from '../components/icons/camera';
 import { Link } from 'react-router-dom';
+import HeroForm from '../components/Form/HeroForm';
 
 const Main = () => {
 
@@ -61,6 +62,10 @@ const Main = () => {
               )
             }
           </div>
+        </div>
+        <br/><br/>
+        <div>
+          <HeroForm></HeroForm>
         </div>
       </div>
     </React.Fragment>

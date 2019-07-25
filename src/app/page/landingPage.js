@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import Logo from '../components/logo';
 import store from '../store/store';
-import Form from '../components/form/Form';
+import HeroForm from '../components/Form/HeroForm';
 const Main = React.lazy(() => import ( "../landing-page/main" ));
 const Path = React.lazy(() => import ( "../components/routes/path" ));  
 
@@ -47,11 +47,7 @@ const LandingPage = (props) => {
                   />
               } />
           )
-        }    
-        <Form
-          toggleVal={toggleForm.arrow}
-          toggleHandler={formSlider}
-        />  
+        }     
       </div>     
     </React.Suspense>
   );

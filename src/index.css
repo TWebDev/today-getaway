@@ -275,7 +275,7 @@ section.sidebar {
   justify-content: space-between;
   background-color: #111;
   position: fixed;
-  width: 30%;
+  width: 100%;
   top: 0%;
   right: 0%;
   bottom: 0%;
@@ -515,3 +515,101 @@ div#loading svg {
 }
 
 /*# sourceMappingURL=index.css.map */
+
+div.mform {
+  padding: 5rem 0 2rem;
+}
+
+div.mform div.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.mform div.header svg {
+  display: inline-block;
+  height: 70px;
+  transform: rotate(270deg);
+  transition: 0.7s cubic-bezier(0.59, 0.4, 0.31, 1.25);
+}
+div.mform div.header svg:hover {
+  cursor: pointer;
+}
+div.mform div.header h1 {
+  width: 70%;
+  color: #ddd;
+  display: inline-block;
+  text-align: center;
+  font-size: 62px;
+}
+div.mform div#mc_embed_signup {
+  width: 90%;
+  height: 60%;
+  margin: 0 auto;
+}
+div.mform div#mc_embed_signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+div.mform div#mc_embed_signup form div.mc-field-group {
+  margin: 5% 0;
+  width: 100%;
+  text-align: center;
+}
+div.mform div#mc_embed_signup form div.mc-field-group input {
+  padding: 0.8em;
+  border: none;
+  border-bottom: 1px solid #c47200;
+  width: 80%;
+  background: transparent;
+  color: #eee;
+  font-size: 16px;
+}
+div.mform div#mc_embed_signup form div.mc-field-group#email input {
+  text-transform: lowercase;
+}
+div.mform div#mc_embed_signup form div#selects div.select select {
+  background: #333;
+  color: #bbb;
+  border: 1px solid #c47200;
+  border-radius: 2px;
+  width: 90%;
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+}
+div.mform div#mc_embed_signup form button {
+  background: #f79000;
+  border: none;
+  padding: 1em 2em;
+  font-size: 16px;
+  width: 60%;
+  color: white;
+  transition: 0.2s linear;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+div.mform div#mc_embed_signup form button:hover {
+  background: #ffa62b;
+  cursor: pointer;
+}
+div.mform div#mc_embed_signup form button:disabled {
+  background: #ddd;
+}
+div.mform div#mc_embed_signup form button:disabled:hover {
+  cursor: default;
+}
+div.mform div.container {
+  width: 70%;
+  margin: 0 auto;
+}
+div.mform div.container div.contact {
+  display: flex;
+  justify-content: space-between;
+}
+div.mform div.container div.contact h6 {
+  color: #c47200;
+  font-weight: 400;
+  font-size: 14px;
+}
